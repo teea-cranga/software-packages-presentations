@@ -105,7 +105,7 @@ The PUT request needs some data in order to create a new entry in table Tickets.
 
 If the data is valid, the program will return the response body that is similar to our request one, but with `ticket_id` automatically added.
 
-###DELETE - Delete a Ticket
+### DELETE - Delete a Ticket
 
 ```
 @app.delete("/deleteTicket/{ticket_id}")
@@ -119,7 +119,7 @@ async def delete_ticket(ticket_id: int, session: SessionDep):
 
 The async function will retrieve the ticket that needs to be deleted by using `ticket_id`. If no such ticket is found, an exception is rasied. Otherwise, the process runs normally and the entry is deleted from the database.
 
-###POST - Change the train from a specific ticket
+### POST - Change the train from a specific ticket
 
 ```
 @app.post("/updateTicket/{ticket_id}")
